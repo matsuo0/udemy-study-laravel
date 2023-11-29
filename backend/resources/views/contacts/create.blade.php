@@ -48,8 +48,8 @@
                               <div class="p-2 w-full">
                                 <div class="relative">
                                   <label class="leading-7 text-sm text-gray-600">性別</label><br>
-                                  <input type="radio" id="gender" value=0>男性
-                                  <input type="radio" id="gender" value=1>女性
+                                  <input type="radio" name="gender" value="0">男性</input>
+                                  <input type="radio" name="gender" value="1">女性</input>
                                 </div>
                               </div>
 
@@ -70,8 +70,8 @@
 
                               <div class="p-2 w-full">
                                 <div class="relative">
-                                  <label for="contacts" class="leading-7 text-sm text-gray-600">お問い合わせ内容</label>
-                                  <textarea id="contacts" name="contacts" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                                  <label for="contact" class="leading-7 text-sm text-gray-600">お問い合わせ内容</label>
+                                  <textarea id="contact" name="contact" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
                                 </div>
                               </div>
 
