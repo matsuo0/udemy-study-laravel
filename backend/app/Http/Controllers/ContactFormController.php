@@ -87,7 +87,8 @@ class ContactFormController extends Controller
         }
 
 
-        return view('contacts.show', compact('contact', 'gender', 'age'));
+        return view('contacts.show',
+        compact('contact', 'gender', 'age'));
 
     }
 
@@ -99,7 +100,9 @@ class ContactFormController extends Controller
      */
     public function edit($id)
     {
-        //
+        $contact = ContactForm::find($id);
+
+        return view('contacts.edit', compact(('contact')));
     }
 
     /**
