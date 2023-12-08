@@ -11,7 +11,9 @@
                 <div class="p-6 text-gray-900">
                     {{-- {{ __("You're logged in!") }} --}}
                     <section class="text-gray-600 body-font relative">
-                        <form method="POST" action ="{{ route('contacts.store') }}" >
+                        <form method="POST" action ="{{ route('contacts.update', [
+                            'id' => $contact->id
+                        ]) }}" >
                             @csrf
                         <div class="container px-5 mx-auto">
                           <div class="lg:w-1/2 md:w-2/3 mx-auto">
@@ -75,7 +77,7 @@
                               </div>
 
                               <div class="p-2 w-full">
-                                <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">新規登録</button>
+                                <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">更新する</button>
                               </div>
 
                             </div>
