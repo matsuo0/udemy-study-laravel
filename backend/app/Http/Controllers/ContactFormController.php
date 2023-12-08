@@ -117,8 +117,9 @@ class ContactFormController extends Controller
         $contact = ContactForm::find($id);
         $contact->name = $request->name;
         $contact->title = $request->title;
-        $contact->email = $request->ename;
+        $contact->email = $request->email;
         $contact->url = $request->url;
+        //dd($request);
         $contact->gender = $request->gender;
         $contact->age = $request->age;
         $contact->contact = $request->contact;
