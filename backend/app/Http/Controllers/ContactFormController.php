@@ -66,8 +66,7 @@ class ContactFormController extends Controller
 
         $age    = CheckFormService::checkAge($contact);
 
-        return view('contacts.show',
-        compact('contact', 'gender', 'age'));
+        return view('contacts.show', compact('contact', 'gender', 'age'));
 
     }
 

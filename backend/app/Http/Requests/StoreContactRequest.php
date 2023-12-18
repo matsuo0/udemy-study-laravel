@@ -26,7 +26,7 @@ class StoreContactRequest extends FormRequest
         return [
             'name' => ['required', 'string', 'max:20'],
             'title' => ['required', 'string', 'max:50'],
-            'email' => ['required', 'email', 'max:255'],
+            'email' => ['required', 'email', 'max:255'],  // テーブル毎に1件ならunique:contact_forms
             'url' => ['url', 'nullable'],
             'gender' => ['required', 'boolean'],
             'age' => ['required'],
