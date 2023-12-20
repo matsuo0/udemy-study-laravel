@@ -12,7 +12,11 @@
                 <div class="p-6 text-gray-900">
                     {{-- {{ __("You're logged in!") }} --}}
                     index<br>
-                    <a href="{{ route('contacts.create') }}" class="text-blue-500">新規登録</a>
+                    <a href="{{ route('contacts.create') }}" class="text-blue-500">新規登録</a><br>
+                    <form class="mb-8" method="GET" action="{{ route('contacts.index') }}">
+                        <input type="text" name="search" placeholder= "検索">
+                        <button type="submit" class="text-blue-500 bg-indigo-500 border-0 py-2 px-8 focus:outline-none">検索</button>
+                    </form>
 
 
                     <div class="lg:w-2/3 w-full mx-auto overflow-auto">
