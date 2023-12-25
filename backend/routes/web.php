@@ -19,18 +19,9 @@ use App\Http\Controllers\Demo\DemoController;
 */
 
 Route::controller(DemoController::class)->group(function(){
-    Route::get('/about', 'index')->name('about');
+    Route::get('/about', 'index')->name('about')->middleware('check');
     Route::get('/contact', 'contactMethod')->name('contact');
 });
-
-// Route::get('/about', function () {
-//     return view('about');
-// });
-
-// Route::get('/contact', function () {
-//     return view('contact');
-// });
-
 
 Route::get('tests/test', [TestController::class, 'index']);
 
