@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\ContactFormController;
 
+use App\Http\Controllers\Demo\DemoController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +17,20 @@ use App\Http\Controllers\ContactFormController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::controller(DemoController::class)->group(function(){
+    Route::get('/about', 'index')->name('about');
+    Route::get('/contact', 'contactMethod')->name('contact');
+});
+
+// Route::get('/about', function () {
+//     return view('about');
+// });
+
+// Route::get('/contact', function () {
+//     return view('contact');
+// });
+
 
 Route::get('tests/test', [TestController::class, 'index']);
 
